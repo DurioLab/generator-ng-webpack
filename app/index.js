@@ -2,8 +2,6 @@ var fs = require('fs');
 var path = require('path');
 var generators = require('yeoman-generator');
 var _ = require('lodash');
-var exec = require('child_process').exec;
-
 
 module.exports = generators.Base.extend({
 
@@ -22,9 +20,9 @@ module.exports = generators.Base.extend({
 
     writing: function () {
 
-        let APP_FOLDER = '../../templates/common/app',
-            ROOT_FOLDER = '../../templates/common/root',
-            JS_FOLDER = '../../templates/javascripts',
+        let APP_FOLDER = 'common/app',
+            ROOT_FOLDER = 'common/root',
+            JS_FOLDER = 'javascripts',
             DEST_ROOT = this.haveNameArg ? this.scriptAppName : '.';
 
 
@@ -46,10 +44,10 @@ module.exports = generators.Base.extend({
         this.fs.copy(this.templatePath(ROOT_FOLDER + '/test/**'), this.destinationPath(DEST_ROOT + '/test/'));
         this.fs.copy(this.templatePath(ROOT_FOLDER + '/config/**'), this.destinationPath(DEST_ROOT + '/config/'));
         this.fs.copy(this.templatePath(ROOT_FOLDER + '/gulpfile.js'), this.destinationPath(DEST_ROOT + '/gulpfile.js'));
-        this.fs.copy(this.templatePath(ROOT_FOLDER + '/.babelrc'), this.destinationPath(DEST_ROOT + '/.babelrc'));
+        this.fs.copy(this.templatePath(ROOT_FOLDER + '/babelrc'), this.destinationPath(DEST_ROOT + '/.babelrc'));
         this.fs.copy(this.templatePath(ROOT_FOLDER + '/karma.conf.js'), this.destinationPath(DEST_ROOT + '/karma.conf.js'));
         this.fs.copy(this.templatePath(ROOT_FOLDER + '/webpack.config.js'), this.destinationPath(DEST_ROOT + '/webpack.config.js'));
-        this.fs.copy(this.templatePath(ROOT_FOLDER + '/.gitignore'), this.destinationPath(DEST_ROOT + '/.gitignore'));
+        this.fs.copy(this.templatePath(ROOT_FOLDER + '/gitignore'), this.destinationPath(DEST_ROOT + '/.gitignore'));
 
 
         this.fs.copyTpl(

@@ -1,11 +1,12 @@
 {
   "name": "generator-ng-webpack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Yeoman generator for angularjs with webpack",
   "files": [
     "app",
     "router"
   ],
+  "main": "app/index.js",
   "keywords": [
     "yeoman-generator",
     "angularjs",
@@ -13,6 +14,10 @@
   ],
   "author": "Arno MA",
   "license": "ISC",
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/frontendhot/generator-ng-webpack.git"
+  },
   "dependencies": {
     "lodash": "^4.16.4",
     "yeoman-generator": "^0.24.1"
