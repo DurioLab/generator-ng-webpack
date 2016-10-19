@@ -30,7 +30,7 @@ let testConfig = Object.assign({}, baseConfig, {
             },
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
+                loader: 'ng-annotate!babel',
                 include: [
                     setting.rootPath + '/src',
                     setting.rootPath + '/test'

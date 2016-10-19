@@ -1,3 +1,4 @@
+require('core-js/fn/object/assign');
 require('../../src/app.js');
 require('angular-mocks');
 

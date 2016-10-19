@@ -64,7 +64,7 @@ module.exports = {
             //js处理 babel-core babel-preset-es2015 babel-loader jsx-loader
             {
                 test:/\.js$/,
-                loader: "babel!ng-annotate",
+                loader: "ng-annotate!babel",
                 exclude: /node_modules/
             },
 
