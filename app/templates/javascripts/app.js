@@ -42,7 +42,7 @@ function requireAll(requireContext) {
 }
 function runModule(modules){
     modules.map(function (func) {
-        func();
+        typeof func == 'function' && func();
     });
 }
 
