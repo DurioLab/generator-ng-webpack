@@ -22,8 +22,11 @@ gulp.task('serve', function() {
         console.log('Listening at localhost:' + port);
         console.log('Opening your system browser...');
 
-        //打开默认浏览器
-        open('http://localhost:' + port + '/webpack-dev-server/');
+        //打开默认浏览器 iframe mode
+        //open('http://localhost:' + port + '/webpack-dev-server/');
+
+        //inline mode
+        open('http://localhost:' + port);
     });
 });
 

@@ -14,6 +14,7 @@ module.exports = {
     publicPath:publicPath,
     port: port,
     devServer: {
+        inline: true,
         contentBase: srcPath,
         historyApiFallback: true,
         hot: true,
